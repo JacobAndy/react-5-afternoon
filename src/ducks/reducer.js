@@ -40,7 +40,7 @@ function reducer(state = initialState, action) {
     case UPDATE_PROPERTY_TYPE:
       return { ...state, propertyType: action.payload };
     case UPDATE_CITY:
-      return { ...state, city: action.payload };
+      return Object.assign({}, state, { city: action.payload });
     case UPDATE_PROP:
       return { ...state, propToBeUsedOn: action.payload };
     case UPDATE_FOUND:
@@ -81,7 +81,7 @@ export function updateLoanType(loanType) {
 export function updateCity(city) {
   return {
     type: UPDATE_CITY,
-    city: city
+    payload: city
   };
 }
 export function updatePropertyType(property) {

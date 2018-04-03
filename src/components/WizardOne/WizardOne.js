@@ -39,9 +39,9 @@ class WizardOne extends Component {
   }
 }
 const mapStateToProps = state => {
+  let { propertyType } = state;
   return {
-    updateLoanType,
-    updatePropertyType
+    propertyType
   };
 };
 

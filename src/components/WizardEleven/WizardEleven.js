@@ -64,7 +64,7 @@ class WizardEleven extends Component {
             <div className="overarching-div">
               <div className="form">
                 Currently working with a real estate agent?:
-                <p className="p2">{this.props.realEstateAgent}</p>
+                <p className="p2">{String(this.props.realEstateAgent)}</p>
               </div>
             </div>
 
@@ -138,6 +138,7 @@ const mapStateToProps = state => {
     addressThree: state.addressThree,
     firstName: state.firstName,
     lastName: state.lastName,
+    email: state.email,
     emailWizardEleven: state.emailWizardEleven
   };
 };

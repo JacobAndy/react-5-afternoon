@@ -13,20 +13,26 @@ class WizardThree extends Component {
           <br />
           <div className="row">
             <Link to="/wFour">
-              <button value="primaryHome" onClick={this.props.propToBeUsedOn}>
+              <button
+                value="primaryHome"
+                onClick={e => updateProp(e.target.value)}
+              >
                 Primary Home
               </button>
             </Link>
             <Link to="/wFour">
               <button
                 value="rentalProperty"
-                onClick={this.props.propToBeUsedOn}
+                onClick={e => updateProp(e.target.value)}
               >
                 Rental Property
               </button>
             </Link>
             <Link to="/wFour">
-              <button value="secondaryHome" onClick={this.props.propToBeUsedOn}>
+              <button
+                value="secondaryHome"
+                onClick={e => updateProp(e.target.value)}
+              >
                 Secondary Home
               </button>
             </Link>
